@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudioFlow</title>
+    <style>
+        /* --- Basic Setup & Dark Mode --- */
+        :root {
+            --primary-color: #00ff99; /* Neon Green */
+            --background-color: #121212;
+            --card-background: #1e1e1e;
+            --text-color: #e0e0e0;
+            --border-color: #333;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* --- Header & Typography --- */
+        .header {
+            text-align: center;
+            padding: 40px 20px;
+            width: 100%;
+        }
+
+        .site-name {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .welcome-message {
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: var(--text-color);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+
+        /* --- Main Content & Product Cards --- */
+        .container {
+            width: 100%;
+            max-width: 600px; /* Optimal width for single-column layout */
+            padding: 0 15px;
+            box-sizing: border-box;
+        }
+
+        .product {
+            background-color: var(--card-background);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0, 255, 153, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .product:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 255, 153, 0.1);
+        }
+
+        .product-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            background-color: #333; /* Placeholder background */
+        }
+
+        .product-description {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* --- Pros & Cons Lists --- */
+        .pros-cons {
+            padding: 0;
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .pros-cons li {
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .pros-cons .pro::before {
+            content: '✓ ';
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .pros-cons .con::before {
+            content: '✗ ';
+            color: #ff4d4d; /* Neon Red for contrast */
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        /* --- "Buy Now" Button --- */
+        .buy-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: #000;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 700;
+            padding: 12px 25px;
+            border-radius: 8px;
+            width: 100%;
+            box-sizing: border-box;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .buy-button:hover {
+            background-color: #fff;
+            transform: scale(1.03);
+        }
+
+        /* --- Footer --- */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <h1 class="site-name">StudioFlow</h1>
+        <p class="welcome-message">Start your rap career with the right gear.</p>
+    </header>
+
+    <main class="container">
+
+        <!-- Product 1: USB Microphone -->
+        <section class="product">
+            <h2>1. USB Microphone</h2>
+            <img src="https://i.imgur.com/Fh0rhOn.jpeg" alt="Rode NT1-A Microphone with shock mount and pop filter" class="product-image">
+            <p class="product-description">
+                A USB mic is the simplest way to record high-quality vocals directly into your computer. It combines a microphone, preamp, and converter into one device.
+            </p>
+            <ul class="pros-cons">
+                <li class="pro">Plug-and-play, very easy to set up.</li>
+                <li class="pro">Affordable and great for beginners.</li>
+                <li class="con">Less flexible than an XLR setup.</li>
+            </ul>
+            <a href="https://sovrn.co/16bbjse" class="buy-button" target="_blank" rel="noopener noreferrer">Buy Now</a>
+        </section>
+
+        <!-- Product 2: Audio Interface -->
+        <section class="product">
+            <h2>2. Focusrite Scarlett Solo (3rd Gen)</h2>
+            <img src="https://media.sweetwater.com/api/i/q-85__ha-5470e4725d734bc7__hmac-e63f79044338be2151fa66071be5c8b3ea07fa70/images/items/750/ScarSG3-large.jpg" alt="Focusrite Scarlett Solo 3rd Gen Audio Interface" class="product-image">
+            <p class="product-description">
+                The Focusrite Scarlett Solo is one of the most trusted USB audio interfaces for beginner and pro creators alike. Clean preamps, low latency, and plug-and-play setup make it a top-tier choice for recording at home.
+            </p>
+            <ul class="pros-cons">
+                <li class="pro">Professional quality sound</li>
+                <li class="pro">Compact and easy to use</li>
+                <li class="con">Only 1 XLR input (best for solo creators)</li>
+            </ul>
+            <a href="https://www.sweetwater.com/store/detail/ScarSG3--focusrite-scarlett-solo-3rd-gen-usb-audio-interface" class="buy-button" target="_blank" rel="noopener noreferrer">Buy Now on Sweetwater</a>
+        </section>
+
+        <!-- Product 3: Headphones -->
+        <section class="product">
+            <h2>3. Audio-Technica ATH-M20x Headphones</h2>
+            <img src="https://media.sweetwater.com/api/i/q-85__ha-c69df41f21b49370__hmac-40c32b6ff4d160191a338b3555a6d805f8f9186d/images/items/750/ATHM20x-large.jpg" alt="Audio-Technica ATH-M20x Closed-Back Monitoring Headphones" class="product-image">
+            <p class="product-description">
+                The ATH-M20x are high-performance studio headphones designed for accurate monitoring and mixing. Ideal for beginners who need clarity, comfort, and isolation at an affordable price.
+            </p>
+            <ul class="pros-cons">
+                <li class="pro">Excellent value for budget-conscious artists</li>
+                <li class="pro">Solid bass response and clarity</li>
+                <li class="con">Non-detachable cable</li>
+            </ul>
+            <a href="https://www.sweetwater.com/store/detail/ATHM20x--audio-technica-ath-m20x-closed-back-monitoring-headphones" class="buy-button" target="_blank" rel="noopener noreferrer">Buy Now on Sweetwater</a>
+        </section>
+
+        <!-- Product 4: DAW Software -->
+        <section class="product">
+            <h2>4. FL Studio 20 Producer Edition</h2>
+            <img src="https://media.sweetwater.com/api/i/q-85__ha-06e9de9fa3e301f9__hmac-28d62e1f1397d3b72c61d74f1f8d2c08d1faebf1/images/items/750/FLStu20Pro-large.jpg" alt="FL Studio 20 Producer Edition Box" class="product-image">
+            <p class="product-description">
+                FL Studio is one of the most popular DAWs in the game — used by legends and beginners alike. Its easy workflow, built-in instruments, and beat-making power make it a favorite for hip-hop and trap producers.
+            </p>
+            <ul class="pros-cons">
+                <li class="pro">Lifetime free updates</li>
+                <li class="pro">Great for loop-based and sample-driven production</li>
+                <li class="con">Can feel overwhelming at first</li>
+            </ul>
+            <a href="https://www.sweetwater.com/store/detail/FLStu20Pro--image-line-fl-studio-20-producer-edition" class="buy-button" target="_blank" rel="noopener noreferrer">Buy Now on Sweetwater</a>
+        </section>
+
+        <!-- Product 5: Studio Monitors -->
+        <section class="product">
+            <h2>5. Yamaha HS5 Studio Monitors (Pair)</h2>
+            <img src="https://media.sweetwater.com/api/i/q-85__ha-b3e0bda2c80c9d3f__hmac-cd7f6d306b267ff850cf9368699cc78a229ac758/images/items/750/HS5pr-large.jpg" alt="Yamaha HS5 Studio Monitors Pair" class="product-image">
+            <p class="product-description">
+                The Yamaha HS5 monitors are known for their clean, flat sound and iconic white-cone design. Ideal for home studios, they reveal every detail in your mix — no hype, just clarity.
+            </p>
+            <ul class="pros-cons">
+                <li class="pro">Accurate sound — no false bass boosts</li>
+                <li class="pro">Trusted by producers worldwide</li>
+                <li class="con">Bass response may need a subwoofer in some rooms</li>
+            </ul>
+            <a href="https://www.sweetwater.com/store/detail/HS5pr--yamaha-hs5-5-inch-powered-studio-monitor-pair-black" class="buy-button" target="_blank" rel="noopener noreferrer">Buy Now on Sweetwater</a>
+        </section>
+        
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 StudioFlow. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
